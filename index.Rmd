@@ -71,8 +71,6 @@ As demonstrated, you can easily estimate Celsius temperature when given Fahrenhe
 
 This yeilds comperable results to the numerically correct formula.
 
-For interactive demo, go to https://smithk165.shinyapps.io/DevDataProducts_Shiny
+For interactive shiny demo, go to https://smithk165.shinyapps.io/DevDataProducts_Shiny
 
-For the code for the Shiny App, go to https://github.com/keiths5/DevDataProducts_Shiny
-
-For the Code for the Slidify assignment go to 
+For the github code for the Shiny and Slidify is at https://github.com/keiths5/keiths5.github.io
