@@ -1,12 +1,204 @@
 <!DOCTYPE html>
 <html>
-<body>
-<h1>Welcome Coursera Grader for Developing Data Products</h1>
-<p>To see the 1st part of the course project on Shiny go to:</p>
-<a href="https://smithk165.shinyapps.io/DevDataProducts_Shiny">https://smithk165.shinyapps.io/DevDataProducts_Shiny</a>
-<p>The github location of these files are:<p>
-<a href="https://github.com/keiths5/DevDataProducts_Shiny">https://github.com/keiths5/DevDataProducts_Shiny</a>
+<head>
+  <title>Easy Temperature Conversion</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Easy Temperature Conversion">
+  <meta name="author" content="">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="libraries/widgets/quiz/css/demo.css"></link>
 
-<p><p>
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Easy Temperature Conversion</h1>
+    <h2>no-calculator temperature conversion from Fahrenheit to Celsius</h2>
+    <p><br/>Developing Data Products - Assignment</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Welcome Coursera Graders</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3>Overview</h3>
+
+<p>Temperature conversion from Fahrenheit to Celsius can be difficult to do without a calculator.  The shiny application demonstrates a simpler method that can be done &quot;in your head&quot;.</p>
+
+<h3>Details and Formulas</h3>
+
+<p>Numerically accurate conversion formula is \(C = (F-32) * 5 / 9\)
+A simpler formula is \(C = (F-30) / 2\)
+For a given Fahrenheit temperature of 72 Deg F the R code is:</p>
+
+<pre><code class="r">(72 - 32) * 5 / 9
+</code></pre>
+
+<pre><code>## [1] 22.22222
+</code></pre>
+
+<pre><code class="r">(72 - 30) / 2
+</code></pre>
+
+<pre><code>## [1] 21
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Plot of Actual C and Estimated C</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Here is a plot of Fahrenheit temperatures from -130 to 135 converted to Celsius using the two formulas.</p>
+
+<p><img src="assets/fig/unnamed-chunk-2-1.png" alt="plot of chunk unnamed-chunk-2"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Interactive Quiz</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class="quiz quiz-single well ">
+  <p>What is the Celsius temperature Estimate for 80 Degres Fahrenheit?</p>
+
+<ol>
+<li>15</li>
+<li>20</li>
+<li><em>25</em></li>
+<li>30</li>
+<li>35</li>
+</ol>
+
+  <button class="quiz-submit btn btn-primary">Submit</button>
+  <button class="quiz-toggle-hint btn btn-info">Show Hint</button>
+  <button class="quiz-show-answer btn btn-success">Show Answer</button>
+  <button class="quiz-clear btn btn-danger">Clear</button>
+  
+  <div class="quiz-hint">
+  <p>Take the Fahrenheit temperature, subtract 30
+then, take that result and divide by 2.</p>
+
+</div>
+<div class="quiz-explanation">
+  <p>C = (F - 32) * 5 / 9
+Est C = (F - 30) / 2</p>
+
+</div>
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Summary</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>As demonstrated, you can easily estimate Celsius temperature when given Fahrenheit temperature by subtracting 30, and then dividing the result by 2.</p>
+
+<p>This yeilds comperable results to the numerically correct formula.</p>
+
+<p>For interactive demo, go to <a href="https://smithk165.shinyapps.io/DevDataProducts_Shiny">https://smithk165.shinyapps.io/DevDataProducts_Shiny</a></p>
+
+<p>For the code for the Shiny App, go to <a href="https://github.com/keiths5/DevDataProducts_Shiny">https://github.com/keiths5/DevDataProducts_Shiny</a></p>
+
+<p>For the Code for the Slidify assignment go to </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Welcome Coursera Graders'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Plot of Actual C and Estimated C'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Interactive Quiz'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Summary'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
 </body>
-</html>
+  <!-- Load Javascripts for Widgets -->
+  <script src="libraries/widgets/quiz/js/jquery.quiz.js"></script>
+<script src="libraries/widgets/quiz/js/mustache.min.js"></script>
+<script src="libraries/widgets/quiz/js/quiz-app.js"></script>
+
+  <!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script> -->
+  <script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
+</script>
+<!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>

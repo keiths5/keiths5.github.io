@@ -9,38 +9,36 @@ widgets     : [mathjax, quiz]            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
 ---
-## Overview
+## Welcome Coursera Graders
+### Overview
 Temperature conversion from Fahrenheit to Celsius can be difficult to do without a calculator.  The shiny application demonstrates a simpler method that can be done "in your head".
 
-## Details and Formulas
+### Details and Formulas
 Numerically accurate conversion formula is $C = (F-32) * 5 / 9$
-A simpler method that could be done easily in your head is $C = (F-30) / 2$
-For a given Fahrenheit temperature of 72 Deg F, the R code is:
-```{r}
+A simpler formula is $C = (F-30) / 2$
+For a given Fahrenheit temperature of 72 Deg F the R code is:
+
+```r
 (72 - 32) * 5 / 9
+```
+
+```
+## [1] 22.22222
+```
+
+```r
 (72 - 30) / 2
 ```
 
---- .class #id 
-## Plot of surface temperatures using both methods
-Here is a plot of Fahrenheit temperatures from -130 to 135 using the two formulas.
-```{r, echo=FALSE}
-library(ggplot2)
-ActF_2_C <- function (temp) (temp - 32) * 5 / 9
-
-EstF_2_C <- function(temp) (temp - 30) / 2
-
-myDF <- read.csv('EarthTempRange.csv')
-Est_C <- apply(myDF, 1, EstF_2_C)
-Act_C <- apply(myDF, 1, ActF_2_C)
-myDF <- cbind(myDF, Act_C, Est_C)
-myDF <- myDF[,!(names(myDF) %in% c('F'))]
-rm(Est_C)
-rm(Act_C)
-
-p <- ggplot(myDF, aes(x=Act_C, y=Est_C))
-p + geom_line(colour = "red", size = 1)
 ```
+## [1] 21
+```
+
+--- .class #id 
+## Plot of Actual C and Estimated C
+Here is a plot of Fahrenheit temperatures from -130 to 135 converted to Celsius using the two formulas.
+
+![plot of chunk unnamed-chunk-2](assets/fig/unnamed-chunk-2-1.png) 
 
 --- &radio  
 ## Interactive Quiz
@@ -70,3 +68,7 @@ As demonstrated, you can easily estimate Celsius temperature when given Fahrenhe
 This yeilds comperable results to the numerically correct formula.
 
 For interactive demo, go to https://smithk165.shinyapps.io/DevDataProducts_Shiny
+
+For the code for the Shiny App, go to https://github.com/keiths5/DevDataProducts_Shiny
+
+For the Code for the Slidify assignment go to 
